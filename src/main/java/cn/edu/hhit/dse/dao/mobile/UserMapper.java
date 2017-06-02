@@ -15,6 +15,7 @@ public interface UserMapper {
 
     /**
      * 添加学生
+     *
      * @param student
      * @return
      */
@@ -23,6 +24,7 @@ public interface UserMapper {
 
     /**
      * 通过学生号查询学生
+     *
      * @param studentNumber
      * @return
      */
@@ -31,6 +33,7 @@ public interface UserMapper {
 
     /**
      * 通过学生号和密码查询学生（学生登陆）
+     *
      * @param studentNumber
      * @param password
      * @return

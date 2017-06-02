@@ -29,7 +29,7 @@ public class UserSignInController {
     // TODO: Check session
     @PostMapping(value = "user/signIn")
     public String userSignIn(@RequestParam("studentNumber") int studentNumber,
-                          @RequestParam("password") String password) {
+                             @RequestParam("password") String password) {
         HashMap<String, String> resultContent = new HashMap<>();
         if (userService.userSignIn(studentNumber, password) > 1 |
                 userService.userSignIn(studentNumber, password) < 0) {
