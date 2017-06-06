@@ -9,13 +9,15 @@ public class Teacher {
     private String password;
     private String name;
     private char sex;
+    private int type; // 用户类型
 
-    public Teacher(int teacherId, int teacherNumber, String password, String name, char sex) {
+    public Teacher(int teacherId, int teacherNumber, String password, String name, char sex, int type) {
         this.teacherId = teacherId;
         this.teacherNumber = teacherNumber;
         this.password = password;
         this.name = name;
         this.sex = sex;
+        this.type = type;
     }
 
     public int getTeacherId() {
@@ -58,6 +60,14 @@ public class Teacher {
         this.sex = sex;
     }
 
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
     @Override
     public String toString() {
         return "Teacher{" +
@@ -66,6 +76,7 @@ public class Teacher {
                 ", password='" + password + '\'' +
                 ", name='" + name + '\'' +
                 ", sex=" + sex +
+                ", type=" + type +
                 '}';
     }
 }

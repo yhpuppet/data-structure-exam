@@ -9,13 +9,15 @@ public class Student {
     private String password;
     private String name;
     private char sex;
+    private int type; // 用户类型
 
-    public Student(int studentId, int studentNumber, String password, String name, char sex) {
+    public Student(int studentId, int studentNumber, String password, String name, char sex, int type) {
         this.studentId = studentId;
         this.studentNumber = studentNumber;
         this.password = password;
         this.name = name;
         this.sex = sex;
+        this.type = type;
     }
 
     public Student(int studentNumber, String password, String name, char sex) {
@@ -65,6 +67,14 @@ public class Student {
         this.sex = sex;
     }
 
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -72,7 +82,8 @@ public class Student {
                 ", studentNumber=" + studentNumber +
                 ", password='" + password + '\'' +
                 ", name='" + name + '\'' +
-                ", sex='" + sex + '\'' +
+                ", sex=" + sex +
+                ", type=" + type +
                 '}';
     }
 }
